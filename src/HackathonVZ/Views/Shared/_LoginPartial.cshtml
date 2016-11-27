@@ -9,13 +9,13 @@
     <form asp-area="" asp-controller="Account" asp-action="LogOff" method="post" id="logoutForm">
         <ul class="nav">
             <li class="nav__user">
-                <a asp-area=""  asp-action="Index" title="Manage">Hello @UserManager.GetUserName(User)!</a>
+                <a asp-area="" title="Manage">Hello @UserManager.GetUserName(User)!</a>
             </li>
             <li class="nav__logoff">
                 <button type="submit" class="btn btn--bordered--alt btn--sml u-spc-left--lrg">Log off</button>
             </li>
             <li class="nav__logoff">
-                <button type="submit" class="btn btn--bordered--alt btn--sml u-spc-left--lrg"><a href="@Url.Action("CreateQuiz", "Admin")">Create Quiz</a></button>
+                <button class="btn" type="submit"><a class="btn btn--bordered btn--sml u-spc-left--lrg" href="@Url.Action("CreateQuiz", "Admin")">Create Quiz</a></button>
             </li>
         </ul>
     </form>

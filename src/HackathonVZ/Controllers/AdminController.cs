@@ -25,6 +25,7 @@ namespace HackathonVZ.Controllers
         }
 
         [HttpGet]
+        [Route("CreateQuiz")]
         public IActionResult CreateQuiz()
         {
             var viewModel = new CreateQuizViewModel();
@@ -32,6 +33,7 @@ namespace HackathonVZ.Controllers
         }
 
         [HttpPost]
+        [Route("CreateQuiz")]
         public async Task<IActionResult> CreateQuiz(CreateQuizViewModel viewModel)
         {
             if (ModelState.IsValid)
@@ -47,6 +49,7 @@ namespace HackathonVZ.Controllers
         }
 
         [HttpGet]
+        [Route("Rounds/{quizId}")]
         public async Task<IActionResult> Rounds(long quizId)
         {
             var quiz = await _quizService.GetQuizByIdAsync(quizId);

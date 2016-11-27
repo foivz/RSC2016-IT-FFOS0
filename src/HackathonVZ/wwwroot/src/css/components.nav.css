@@ -8,7 +8,6 @@
     margin-top: calc($unit * 2);
 
     &__item {
-        float: left;
         padding-left: calc($unit * 4);
     }
 

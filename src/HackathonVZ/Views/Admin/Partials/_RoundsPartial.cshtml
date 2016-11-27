@@ -3,10 +3,10 @@
 <div class="rounds__added">
 @if (Model.Rounds.Count > 0)
 {
-    var roundCounter = 1;
+    var roundCounter = 0;
     foreach (var round in Model.Rounds.OrderBy(r=>r.Round.Id))
     {
-        var questionCounter = 1;
+        var questionCounter = 0;
         roundCounter = roundCounter+1;
         <div>
             @Html.Hidden("RoundId", round.Round.Id, new { @class = "js-roundId" })

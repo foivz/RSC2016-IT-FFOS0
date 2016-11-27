@@ -285,10 +285,10 @@ namespace HackathonVZ.Data
                 if (!context.QuestionType.Any())
                 {
                     context.QuestionType.AddRangeAsync(
-                        new QuestionType { Name = "Single Answer", Abrv = "1AN", TimerSeconds = 10 },
-                        new QuestionType { Name = "Multiple Answer", Abrv = "XAN", TimerSeconds = 20 },
-                        new QuestionType { Name = "Custom Input", Abrv = "CUS", TimerSeconds = 100 },
-                        new QuestionType { Name = "Mixed", Abrv = "MIX", TimerSeconds = 10910 }
+                        new QuestionType { Id = 1, Name = "Single Answer", Abrv = "1AN", TimerSeconds = 10 },
+                        new QuestionType { Id = 2, Name = "Multiple Answer", Abrv = "XAN", TimerSeconds = 20 },
+                        new QuestionType { Id = 3, Name = "Custom Input", Abrv = "CUS", TimerSeconds = 100 },
+                        new QuestionType { Id = 4, Name = "Mixed", Abrv = "MIX", TimerSeconds = 10910 }
                     );
                 }
 

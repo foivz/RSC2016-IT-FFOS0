@@ -102,6 +102,12 @@ namespace HackathonVZ
                 ClientSecret = "jisKl_0tccHPXHEEKSolYa8d"
             });
 
+            app.UseTwitterAuthentication(new TwitterOptions()
+            {
+                ConsumerKey = "dzUeMvUvKALDyBRTlxXnHsMZX",
+                ConsumerSecret = "wERuc6RFSiwp125gKR9p9ZKn0c5KQW9edBRgW7ZRa9t3pJaPoT"
+            });
+
             // Add external authentication middleware below. To configure them please see http://go.microsoft.com/fwlink/?LinkID=532715
 
             app.UseMvc(routes =>

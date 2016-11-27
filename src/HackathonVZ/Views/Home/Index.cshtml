@@ -6,8 +6,8 @@ ViewData["Title"] = "Home Page";
 <div class="splash">
     <div class="wrapper">
         <div class="splash__title">
-            <h1 class="u-type--alpha">Apply for quiz</h1>
-            <p class="u-type--delta u-spc-top--lrg">Compete with other teams, win prizes, have fun!</p>
+            <h1 class="u-type--alpha">Apply for a quiz</h1>
+            <p class="u-type--delta u-spc-top--lrg">Compete with other teams, win prizes, and have fun!</p>
             <div>
                 @if (User.Identity.IsAuthenticated)
                 {
@@ -15,7 +15,7 @@ ViewData["Title"] = "Home Page";
                     {
                         @Html.AntiForgeryToken()
 
-                        @Html.TextBoxFor(m => m.TeamName, new {@class = "input input--text input--lrg rounds__select u-spc-top--lrg"})
+                        @Html.TextBoxFor(m => m.TeamName, new {@class = "input input--text input--lrg splash__input u-spc-top--lrg"})
                         @Html.ValidationMessageFor(m => m.TeamName)
                         if(ViewData["Message"] != null)
                         {
@@ -27,9 +27,9 @@ ViewData["Title"] = "Home Page";
                 }
                 else
                 {
-                    <p>Get started</p>
+                    
                 }
-                
+
             </div>
             
             

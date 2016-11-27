@@ -899,8 +899,8 @@ table th {
 
 .btn--bordered:hover,
         .btn--bordered:focus {
-  color: white;
   background: #AC7936;
+  color: white;
   border: 1px solid rgb(190, 134, 60);
 }
 
@@ -1285,7 +1285,6 @@ table th {
 }
 
 .nav__item {
-  float: left;
   padding-left: 16px;
 }
 
@@ -1572,31 +1571,43 @@ table th {
 }
 
 .splash__title {
-  padding: 120px 0;
+  padding: 60px 0;
 }
 
 @media   (min-width: 48em) {
 
   .splash__title{
+    padding: 120px 0;
     float: left;
+    width: 50%;
     text-align: left;
   }
 }
 
 .splash__phone {
   width: 400px;
+  margin: 0 auto;
+  margin-bottom: 48px;
 }
 
 @media   (min-width: 48em) {
 
   .splash__phone{
     float: right;
+    width: 50%;
+    padding: 48px;
   }
 }
 
 .splash__phone img {
   width: 100%;
   height: auto;
+}
+
+.splash__input {
+  border-radius: 1000px;
+  background: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
 }
 /*------------------------------------*\
     # components.upcoming

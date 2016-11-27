@@ -14,24 +14,36 @@
     }
 
     &__title {
-        padding: calc($unit * 30) 0;
+        padding: calc($unit * 15) 0;
 
         @media (--screen-from-med) {
+            padding: calc($unit * 30) 0;
             float: left;
+            width: 50%;
             text-align: left;
         }
     }
 
     &__phone {
         width: 400px;
+        margin: 0 auto;
+        margin-bottom: calc($unit * 12);
 
         @media (--screen-from-med) {
-            float: right;   
+            float: right;
+            width: 50%;  
+            padding: calc($unit * 12);
         }
 
         img {
             width: 100%;
             height: auto;
         }
+    }
+
+    &__input {
+        border-radius: $global-rounded;
+        background: color(white a(0.8));
+        margin-bottom: calc($unit * 5);
     }
 }
