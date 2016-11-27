@@ -1,0 +1,182 @@
+﻿@model MainGameViewModel
+@{
+ViewData["Title"] = "Main Game";
+}
+
+<div class="wrapper wrapper--narrow">
+    <div class="chat" id="js-chat">
+        <h1 class="chat__title u-type--gamma">
+            Welcome to RSC Quiz!
+        </h1>
+        <div class="js-messages">
+
+        </div>
+        <div class="chat__messages">
+            <div class="message message--moderator">
+                <div class="message__sender">
+                    <span class="message__player">John Wayne</span> asks
+                </div>    
+                <div class="message__body">
+                    <p class="message__body__content">What is the tallest building in France?</p>
+                </div>
+            </div>
+
+            <div class="message message--player">
+                <div class="message__sender">
+                    <span class="message__player">Hawking</span> replies for team <span class="message__team">Team 1</span>
+                </div>    
+                <div class="message__body">
+                    <p class="message__body__content">Tour First!</p>
+                </div>
+            </div>
+
+            <div class="message message--player">
+                <div class="message__sender">
+                    <span class="message__player">Cvjetko</span> replies for team <span class="message__team">SuperTeam</span>
+                </div>    
+                <div class="message__body">
+                    <p class="message__body__content">It's all in the Matrix</p>
+                </div>
+            </div>
+
+            <div class="message message--player">
+                <div class="message__sender">
+                    <span class="message__player">Jack</span> replies for <span class="message__team">Team 3</span>
+                </div>    
+                <div class="message__body">
+                    <p class="message__body__content">Tour First!</p>
+                </div>
+            </div>
+
+            <div class="message message--moderator">
+                <div class="message__sender">
+                    <span class="message__player">John Wayne</span> asks
+                </div>    
+                <div class="message__body">
+                    <p class="message__body__content">What is the tallest building in France?</p>
+                </div>
+            </div>
+
+            <div class="message message--player">
+                <div class="message__sender">
+                    <span class="message__player">Hawking</span> replies for team <span class="message__team">Team 1</span>
+                </div>    
+                <div class="message__body">
+                    <p class="message__body__content">Tour First!</p>
+                </div>
+            </div>
+
+            <div class="message message--player">
+                <div class="message__sender">
+                    <span class="message__player">Cvjetko</span> replies for team <span class="message__team">SuperTeam</span>
+                </div>    
+                <div class="message__body">
+                    <p class="message__body__content">It's all in the Matrix</p>
+                </div>
+            </div>
+
+            <div class="message message--player">
+                <div class="message__sender">
+                    <span class="message__player">Jack</span> replies for <span class="message__team">Team 3</span>
+                </div>    
+                <div class="message__body">
+                    <p class="message__body__content">Tour First!</p>
+                </div>
+            </div>
+
+            <div class="message message--moderator">
+                <div class="message__sender">
+                    <span class="message__player">John Wayne</span> asks
+                </div>    
+                <div class="message__body">
+                    <p class="message__body__content">What is the tallest building in France?</p>
+                </div>
+            </div>
+
+            <div class="message message--player">
+                <div class="message__sender">
+                    <span class="message__player">Hawking</span> replies for team <span class="message__team">Team 1</span>
+                </div>    
+                <div class="message__body">
+                    <p class="message__body__content">Tour First!</p>
+                </div>
+            </div>
+
+            <div class="message message--player">
+                <div class="message__sender">
+                    <span class="message__player">Cvjetko</span> replies for team <span class="message__team">SuperTeam</span>
+                </div>    
+                <div class="message__body">
+                    <p class="message__body__content">It's all in the Matrix</p>
+                </div>
+            </div>
+
+            <div class="message message--player">
+                <div class="message__sender">
+                    <span class="message__player">Jack</span> replies for <span class="message__team">Team 3</span>
+                </div>    
+                <div class="message__body">
+                    <p class="message__body__content">Tour First!</p>
+                </div>
+            </div>
+
+            <div class="message message--moderator">
+                <div class="message__sender">
+                    <span class="message__player">John Wayne</span> notifies you
+                </div>    
+                <div class="message__body">
+                    <p class="message__body__content">There will be a break. Strech your fingers and get ready for the next round!</p>
+                </div>
+                <div class="message__body">
+                    <p class="message__body__content">Are you ready? Game starts in 7 seconds!</p>
+                </div>
+            </div>
+
+            <div class="message message--moderator">
+                <div class="message__sender">
+                    <span class="message__player">John Wayne</span> asks
+                </div>    
+                <div class="message__body">
+                    <p class="message__body__content">What is the tallest building in France?</p>
+                </div>
+            </div>
+
+            <div class="message message--system">
+                <h3>Round 3!</h3>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="answer">
+
+        <div class="multiple-answer">
+            <div class="btn btn--bordered btn--med multiple-answer__item">
+                First answer
+            </div>
+            <div class="btn btn--bordered btn--med multiple-answer__item">
+                Second answer
+            </div>
+            <div class="btn btn--bordered btn--med multiple-answer__item">
+                Third answer
+            </div>
+            <div class="btn btn--bordered btn--med multiple-answer__item">
+                Fourth answer
+            </div>
+        </div>
+
+
+        <div class="timer">
+            You have <span class="u-color--primary u-type--bold">7</span> more seconds to answer!
+        </div>
+        <form action="" method="get">
+            <input class="input input--text input--lrg answer__input" placeholder="answer">
+            <button class="answer__submit btn btn--special btn--lrg">Send</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    var objDiv = document.getElementById("js-chat");
+    objDiv.scrollTop = objDiv.scrollHeight;
+</script>

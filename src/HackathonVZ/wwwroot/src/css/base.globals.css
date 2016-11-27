@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    # base.globals
+\*------------------------------------*/
+
+/**
+ * Initialize typomatic in project (sets font-size and line-height
+ * on html selector.
+ */
+
+html {
+    @mixin typomatic-init;
+    height: 100%;
+}
+
+body {
+    position: relative;
+    color: $color-text;
+    font-family: $ff-sans;
+    background: $bg-gray;
+    height: 100%;
+}
+
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+svg {
+    max-width: 100%;
+}
+
+iframe {
+    border: 0;
+}

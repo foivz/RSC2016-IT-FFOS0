@@ -1,0 +1,135 @@
+/*------------------------------------*\
+# modules.input
+\*------------------------------------*/
+
+.input {
+
+    /**
+    * Input base
+    */
+    padding: 0;
+    margin: 0;
+    border: 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    box-sizing: border-box; 
+
+    -webkit-border-radius: 0; /* Prefixed to remove border radius on iOS */
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+    font-family: $ff-sans;
+    transition: all 0.1s ease-in;
+    color: white;
+    @mixin type-scale $type-small, 1;
+
+    &:focus {
+        border-color: $color-primary;
+        background: white;
+        outline: 2px solid $color-primary;
+        outline: 0;
+    }
+
+    &--error {
+        border-bottom: 2px solid color(#ff0000 a(0.9)) !important;
+    }
+
+    /**
+    * input sizes
+    */
+    &--sml {
+        @mixin type-scale $type-small, 1;
+        height: calc($unit * 6);
+        line-height: calc($unit * 6);
+        padding-right: calc($unit * 3);
+        padding-left: calc($unit * 3);
+    }
+
+    &--med {
+        height: calc($unit * 8);
+        line-height: calc($unit * 8); 
+        padding-right: calc($unit * 5);
+        padding-left: calc($unit * 5);
+    }
+
+    &--lrg {
+        height: calc($unit * 12);
+        line-height: calc($unit * 12);
+        padding-right: calc($unit * 8);
+        padding-left: calc($unit * 8);
+    }
+
+    &--split {
+        width: 50%;
+        float: left;
+    }
+
+    /**
+    * input types
+    */
+
+    &--text {
+        color: $color-primary;
+    }
+
+    &--number {
+        padding-right: 0;
+    }
+
+
+    &--textarea {
+        min-height: 160px;
+        resize: vertical;
+        border: none;
+        padding: 0 calc($unit * 2);
+    }
+
+    &--check,
+    &--radio {  
+        width: 1.25em;
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+        opacity: 0;
+
+        &:focus {
+            border: 0.0625em solid $color-secondary;
+        }
+
+        & + label {
+            display: inline-block;
+            margin-left: -2em;
+            line-height: 1.75em;
+
+            & > span {
+                display: inline-block;
+                width: calc($unit * 3);
+                height: calc($unit * 3);
+                margin: 0.25em 0.5em 0.25em 0.25em;
+                border: 0.0625em solid rgb(192,192,192);
+                vertical-align: bottom;
+                background: white;
+            }
+        }
+
+        &:checked + label > span:before {
+            content: '';
+            width: calc($unit * 3);
+            height: calc($unit * 3);
+            display: block;
+            background: $color-primary;
+        }
+    }
+
+    &--radio {
+        &:checked + label > span > span {
+            display: block;
+            width: 0.5em;
+            height: 0.5em;
+            margin: 0.125em;
+            border: 0.0625em solid rgb(115,153,77);
+            border-radius: 0.125em;
+        }
+    }
+}

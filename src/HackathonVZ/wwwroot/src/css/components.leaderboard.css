@@ -1,0 +1,44 @@
+/*------------------------------------*\
+    # components.leaderboard
+\*------------------------------------*/
+
+.leaderboard {
+    background: white;
+    padding-bottom: calc($unit * 10);
+
+    &__title {
+        text-align: center;
+        color: $color-primary;
+        font-weight: $type-weight-bold;
+        padding: calc($unit * 12) 0;
+    }
+
+    &__header {
+        lost-utility: clearfix;
+        border-bottom: 1px solid color($color-primary a(0.5));
+        font-weight: $type-weight-bold;
+        text-align: center;
+        padding: calc($unit * 2);
+
+        &__item {
+            lost-column: 4/12;
+        }
+    }
+
+    &__content {
+        text-align: center;
+
+        &__team {
+            padding: calc($unit * 2) 0;
+            lost-utility: clearfix;
+
+            &:nth-child(even) {
+                background: color($color-secondary a(0.1));
+            }
+        }
+
+        &__item {
+            lost-column: 4/12;
+        }
+    }
+}

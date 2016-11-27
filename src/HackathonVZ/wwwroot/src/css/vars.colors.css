@@ -1,0 +1,38 @@
+/*------------------------------------*\
+    # vars.colors
+\*------------------------------------*/
+/**
+ * Main colors
+ */
+$blue: #3682AC;
+$orange: #AC7936;
+$accent-blue: #67C5F8;
+$accent-orange: #CC8F40;
+
+/**
+ * Global text color
+ */
+$color-text:        #555555;
+$color-text-alt:    #eeeeee;
+
+/**
+ * Theme colors
+ */
+$color-primary:     $blue;
+$color-secondary:   $orange;
+
+$color-primary-accent:      $accent-blue;
+$color-secondary-accent:    $accent-orange;
+
+/**
+ * Utility colors
+ */
+$color-warning:     #F44336;
+$color-success:     #327e8f;
+$color-note:        #E2BA45;
+
+/**
+ * Backgrounds
+ */
+
+ $bg-gray: #eee;

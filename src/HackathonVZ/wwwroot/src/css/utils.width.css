@@ -1,0 +1,46 @@
+/*------------------------------------*\
+    # utils.width
+\*------------------------------------*/
+
+.u-width {
+    
+    &--full {
+        width: 100%;
+    }
+
+    &--one-half {
+        width: calc(100% / 2);
+    }
+
+    &--one-third {
+        width: calc(100% / 3);
+    }
+
+    &--one-fourth {
+        width: calc(100% / 4);
+    }
+
+    &--one-fifth {
+        width: calc(100% / 5);
+    }
+
+    &--one-sixth {
+        width: calc(100% / 6);
+    }
+
+    &--one-seventh {
+        width: calc(100% / 7);
+    }
+
+    &--one-eight {
+        width: calc(100% / 8);
+    }
+
+    &--one-nineth {
+        width: calc(100% / 9);
+    }
+
+    &--one-tenth {
+        width: calc(100% / 10);
+    }
+}

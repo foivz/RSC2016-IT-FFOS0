@@ -1,0 +1,48 @@
+﻿@model RoundsPartialViewModel
+
+<div class="rounds__added">
+@if (Model.Rounds.Count > 0)
+{
+    var roundCounter = 1;
+    foreach (var round in Model.Rounds.OrderBy(r=>r.Round.Id))
+    {
+        var questionCounter = 1;
+        roundCounter = roundCounter+1;
+        <div>
+            @Html.Hidden("RoundId", round.Round.Id, new { @class = "js-roundId" })
+            <p class="u-type--gamma rounds__round">Round @roundCounter</p>
+            
+            @Html.DropDownList("TypeId", new SelectList(Model.QuestionTypes, "Id", "Name", round.Round.TypeId),
+                 new { @class = "js-type input input--lrg input--text rounds__select" })
+
+            @Html.DropDownList("CategoryId", new SelectList(Model.Categories, "Id", "Name", round.Round.CategoryId),
+                 new { @class = "js-category input input--lrg input--text rounds__select" })
+
+                @foreach (var question in round.RoundQuestions)
+                {
+
+                        questionCounter = questionCounter+1;
+
+                        <div class="rounds__question">
+
+                        <p class="u-type--delta rounds__question__title u-type--bold">Question #@questionCounter</p>
+                        @Html.Hidden("QuestionId", question.Id, new { @class = "js-questionId" })
+                        <span>
+                            <p class="u-type--epsilon rounds__modifier">Add Modifier</p>
+                            @foreach (var modifier in Model.Modifiers)
+                            {
+                            @Html.Hidden("ModifierId", modifier.Id, new { @class = "js-modifierId" })
+                            <button class="btn btn--bordered--alt btn--med rounds__button @(modifier.Id == question.ModifierId ? "btn--disabled" : "") js-modifierButton">@modifier.Name</button>
+                        }
+                        </span>
+                    </div>
+                }
+        </div>
+    }
+}
+else
+{
+    <p>No rounds have been added yet</p>
+}
+
+</div>

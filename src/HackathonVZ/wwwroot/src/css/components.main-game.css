@@ -1,0 +1,9 @@
+/*------------------------------------*\
+    # components.main-game
+\*------------------------------------*/
+
+.main-game {
+    background: $bg-gray;
+    min-width: 500px;
+    background: white;
+}

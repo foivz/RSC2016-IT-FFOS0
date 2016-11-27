@@ -1,0 +1,28 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using HackathonVZ.Models
+
+@inject SignInManager<HackathonVZ.Data.ApplicationUser> SignInManager
+@inject UserManager<HackathonVZ.Data.ApplicationUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <form asp-area="" asp-controller="Account" asp-action="LogOff" method="post" id="logoutForm">
+        <ul class="nav">
+            <li class="nav__user">
+                <a asp-area=""  asp-action="Index" title="Manage">Hello @UserManager.GetUserName(User)!</a>
+            </li>
+            <li class="nav__logoff">
+                <button type="submit" class="btn btn--bordered--alt btn--sml u-spc-left--lrg">Log off</button>
+            </li>
+            <li class="nav__logoff">
+                <button type="submit" class="btn btn--bordered--alt btn--sml u-spc-left--lrg"><a href="@Url.Action("CreateQuiz", "Admin")">Create Quiz</a></button>
+            </li>
+        </ul>
+    </form>
+}
+else
+{
+    <ul class="nav">
+        <li class="nav__item"><a class="nav__link btn btn--bordered--alt btn--med" asp-area="" asp-controller="Account" asp-action="Login">Log in</a></li>
+    </ul>
+}

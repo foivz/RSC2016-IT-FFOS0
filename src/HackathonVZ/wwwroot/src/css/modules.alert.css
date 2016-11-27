@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    # modules.alert
+\*------------------------------------*/
+
+.alert {
+    display: block;
+    @mixin type-scale $type-small, 0.75;
+
+    &--success {
+        color: $color-success;
+    }
+
+    &--warning {
+        color: $color-warning;
+    }
+    
+    &--note {
+        color: $color-note;
+    }
+
+}

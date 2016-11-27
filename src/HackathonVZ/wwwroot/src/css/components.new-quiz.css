@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    # components.new-quiz
+\*------------------------------------*/
+
+.new-quiz {
+    margin-top: calc($unit * 10);
+
+    &__title {
+        margin-bottom: calc($unit * 10);
+        padding-bottom: calc($unit * 3);
+        border-bottom: 1px solid color($color-primary a(0.2));
+        text-align: center;
+    }
+
+    &__label {
+        margin-left: calc($unit * 2);
+        margin-bottom: calc($unit * 2);
+    }
+
+    &__input {
+        border-radius: $global-rounded;
+        margin-bottom: calc($unit * 8);
+        @mixin type-scale $type-base, 1;
+    }
+
+    &__button {
+        width: 100%;
+    }
+}

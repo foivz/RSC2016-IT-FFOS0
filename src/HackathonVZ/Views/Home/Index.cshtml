@@ -1,0 +1,116 @@
+﻿@model IndexHomeViewModel
+@{
+ViewData["Title"] = "Home Page";
+}
+
+<div class="splash">
+    <div class="wrapper">
+        <div class="splash__title">
+            <h1 class="u-type--alpha">Apply for quiz</h1>
+            <p class="u-type--delta u-spc-top--lrg">Compete with other teams, win prizes, have fun!</p>
+            <div>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    @using (Html.BeginForm("TeamExists", "Home", FormMethod.Post, new { @class = "form form-horizontal", role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        @Html.TextBoxFor(m => m.TeamName, new {@class = "input input--text input--lrg rounds__select u-spc-top--lrg"})
+                        @Html.ValidationMessageFor(m => m.TeamName)
+                        if(ViewData["Message"] != null)
+                        {
+                            <p class="alert">@ViewData["Message"]</p>
+                        }
+
+                        <input type="submit" class="btn btn--primary u-spc-top--sml btn--lrg" value="Join" />
+                    }
+                }
+                else
+                {
+                    <p>Get started</p>
+                }
+                
+            </div>
+            
+            
+        </div>
+        <div class="splash__phone">
+            <img src="~/dist/images/phone.svg">
+        </div>
+    </div>
+</div>
+
+<div class="upcoming">
+    <div class="wrapper">
+        <div class="upcoming__title">
+            <h2 class="u-type--beta">Upcoming events</h2>
+        </div>
+        @if (Model.QuizList.Count > 0)
+        {
+            @foreach (var quiz in Model.QuizList.OrderByDescending(q => q.Id))
+            {
+                <div class="upcoming__item">
+                    <div class="upcoming__item__title u-type--delta">
+                        @quiz.Name
+                    </div>
+                    <div class="upcoming__item__description">
+                        <ul>
+                            <li>@quiz.StartTime</li>
+                            <li>@quiz.MaxTeams</li>
+                        </ul>
+                        <div class="btn btn--bordered--alt btn--sml u-spc-top--med">Join quiz</div>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="upcoming__title">
+                <h3 class="u-type--beta">No events are registered for now.</h3>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="leaderboard">
+    <div class="wrapper wrapper--narrow">
+        <div class="leaderboard__title u-type--beta">
+            Leaderboard
+        </div>
+
+        <div class="leaderboard__header">
+            <div class="leaderboard__header__item">Place</div>
+            <div class="leaderboard__header__item">Team name</div>
+            <div class="leaderboard__header__item">Score</div>
+        </div>
+
+        <div class="leaderboard__content">
+            <div class="leaderboard__content__team">
+              <div class="leaderboard__content__item">1</div>
+              <div class="leaderboard__content__item">Super team</div>
+              <div class="leaderboard__content__item">4</div>
+            </div>
+            <div class="leaderboard__content__team">
+              <div class="leaderboard__content__item">2</div>
+              <div class="leaderboard__content__item">Super team</div>
+              <div class="leaderboard__content__item">4</div>
+            </div>
+            <div class="leaderboard__content__team">
+              <div class="leaderboard__content__item">3</div>
+              <div class="leaderboard__content__item">Super team</div>
+              <div class="leaderboard__content__item">4</div>
+            </div>
+            <div class="leaderboard__content__team">
+              <div class="leaderboard__content__item">4</div>
+              <div class="leaderboard__content__item">Super team</div>
+              <div class="leaderboard__content__item">4</div>
+            </div>      
+        </div>
+    </div>
+</div>
+
+<div class="showoff">
+    <div class="wrapper wrapper--narrow wrapper--padding">
+        <a class="btn btn--bordered--alt btn--lrg" href="@Url.Action("MainGame", "Home")">How it should have ended</a>
+    </div>
+</div>

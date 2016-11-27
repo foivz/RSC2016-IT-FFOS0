@@ -1,0 +1,50 @@
+/*------------------------------------*\
+    # components.login
+\*------------------------------------*/
+
+.login {
+    background: white;
+    padding: calc($unit * 4);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+
+    &__title {
+        text-align: center;
+        margin-bottom: calc($unit * 8);
+        padding-bottom: calc($unit * 4);
+        border-bottom: 1px solid color($color-primary a(0.3));
+    }
+
+    &__subtitle {
+        text-align: center;
+    }
+
+    &__service {
+        width: 100%;
+        position: relative;
+
+        &--item {
+            background: white;
+            padding: calc($unit * 6) 0;
+            margin-bottom: calc($unit * 2);
+            text-align: center;
+            color: $color-primary;
+            font-weight: $type-weight-bold;
+        }
+
+        &__image {
+            position: absolute;
+            top: calc($unit * 4);
+            left: calc($unit * 6);
+            width: 32px;
+        }
+    }
+
+    &__info {
+        text-align: center;
+        margin: calc($unit * 10) 0;
+    }
+
+    &__input {
+        border-radius: $global-rounded;
+    }
+}

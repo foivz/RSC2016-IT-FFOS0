@@ -1,0 +1,139 @@
+/**
+* Title: HanzaMedia
+* Author/s: Prototyp
+* CSS build platform: Gulp
+* CSS development build command: gulp build
+* CSS production build command: gulp build
+* CSS processor: PostCSS
+* CSS processor usage: autoprefixing, nesting, variables, minification, pxtorem, color functions
+* CSS name convention: BEM
+* Global indentation: 4 spaces
+* Global units: px
+* Global prefix: none
+* Browser support: IE10+, last 3 versions of modern browsers
+* Additional notes:
+*/
+
+/**
+* Import: vars
+* Description: variables
+*/
+@import vars.globals.css;
+@import vars.typography.css;
+@import vars.responsive.css;
+@import vars.colors.css;
+
+/**
+* Import: tools
+* Description: tools like typomatic and other mixins / libraries
+*/
+@import tools.typomatic.css;
+@import tools.clearfix.css;
+
+/**
+* Import: generic
+* Description: normalize or reset CSS, box sizing
+*/
+@import '../../../node_modules/normalize.css/normalize.css';
+@import generic.boxsizing.css;
+
+/**
+* Import: base
+* Description: base structural stylings for setting the body, typography
+* and other base styles (no classes should be added here)
+*/
+@import base.globals.css;
+@import base.typography.css;
+
+/**
+* Import: modules
+* Description: cross project reusable 1
+*/
+@import modules.container.css;
+@import modules.row.css;
+@import modules.wrapper.css;
+@import modules.btn.css;
+@import modules.input.css;
+@import modules.field.css;
+@import modules.fieldset.css;
+@import modules.formatted.css;
+
+/* @import modules.anchor.css; */
+
+/**
+* Import: components
+* Description: specific website/app components
+@import components.site-header.css;
+*/
+
+@import components.header.css;
+@import components.nav.css;
+@import components.footer.css;
+
+@import components.main-game.css;
+@import components.chat.css;
+@import components.timer.css;
+@import components.message.css;
+@import components.answer.css;
+@import components.index.css;
+@import components.multiple-answer.css;
+@import components.login.css;
+
+@import components.splash.css;
+@import components.upcoming.css;
+@import components.leaderboard.css;
+
+@import components.new-quiz.css;
+@import components.rounds.css;
+
+@import components.logo.css;
+@import components.showoff.css;
+
+
+
+/**
+* Import: views
+* Description: specific website/app views (example: 404 view, login view)
+*/
+
+/* @import views.404.css; */
+
+/**
+* Import: utils
+* Description: reusable utilities such as floats, spacers etc.
+*/
+
+@import utils.grid.css;
+@import utils.width.css;
+@import utils.spacers.css;
+@import utils.type.css;
+@import utils.radius.css;
+@import utils.float.css;
+@import utils.visibility.css;
+@import utils.list.css;
+@import utils.colors.css;
+
+/**
+* Import: plugins
+* Description: 3rd party code, external plugin CSS etc
+* Note: when importing code from a 3rd party it should be stripped off
+* any vendor prefixes since autoprefixer will use project specific vendor prefixes
+*/
+@import plugins.fontface.css;
+/* @import plugins.pickadate.css;
+ */
+
+/**
+* Import: shame
+* Description: CSS shame file
+* Note: to be avoided, exists only if REALLY necessary or legacy code
+*/
+
+/* @import shame.css; */
+
+
+/**
+* Import: imported 
+* Description: external CSS file
+* Note: Used when applying header/footer from other website to add main content
+*/

@@ -1,0 +1,35 @@
+﻿@model CreateQuizViewModel
+@{ 
+    ViewData["title"] = "New Quiz";
+}
+
+<div class="new-quiz">
+    <div class="wrapper wrapper--narrow wrapper--padding">
+
+    <h1 class="new-quiz__title u-type--beta">
+        Add new quiz
+    </h1>
+
+        @using (Html.BeginForm("CreateQuiz", "Admin", FormMethod.Post, new { @class = "form form-horizontal js-creatQuiz", role = "form" }))
+        {
+        @Html.AntiForgeryToken()
+            @Html.LabelFor(m=>m.Name, new { @class="field__lbl new-quiz__label u-type--delta"})
+            @Html.TextBoxFor(m=>m.Name, new { @class="input input--text input--lrg new-quiz__input"})
+            @Html.ValidationMessageFor(m=>m.Name, "", new { @class="alert alert--warning"})
+
+            @Html.LabelFor(m=>m.MaxTeams, new { @class="field__lbl new-quiz__label u-type--delta"})
+            @Html.TextBoxFor(m=>m.MaxTeams, new { @class="input input--text input--lrg new-quiz__input"})
+            @Html.ValidationMessageFor(m=>m.MaxTeams, "", new { @class="alert alert--warning"})
+
+
+            @Html.LabelFor(m=>m.StartTime, new { @class="field__lbl new-quiz__label u-type--delta"})
+            @Html.TextBoxFor(m=>m.StartTime, new { @class="input input--text input--lrg new-quiz__input"})
+            @Html.ValidationMessageFor(m=>m.StartTime, "", new { @class="alert alert--warning"})
+
+        <input class="btn btn--primary btn--lrg new-quiz__button" type="submit" value="Next"/>
+    }
+
+    </div>
+</div>
+
+

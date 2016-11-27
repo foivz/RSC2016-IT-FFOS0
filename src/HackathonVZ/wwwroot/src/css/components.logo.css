@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    # components.logo
+\*------------------------------------*/
+
+.logo {
+    width: 120px;
+    padding-top: calc($unit * 4);
+    margin: 0 auto;
+
+    @media (--screen-from-med) {
+        float: left;
+        margin: auto;
+    }
+}

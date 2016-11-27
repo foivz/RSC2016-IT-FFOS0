@@ -1,0 +1,31 @@
+/*------------------------------------*\
+    # components.upcoming
+\*------------------------------------*/
+
+.upcoming {
+    padding-bottom: calc($unit * 20);
+    background: color($color-secondary a(0.15));
+
+    &__title {
+        color: $color-secondary;
+        text-align: center;
+        padding: calc($unit * 12) 0;
+    }
+
+    &__item {
+        margin-top: calc($unit * 12);
+        text-align: center;
+        
+        @media (--screen-from-sml) {
+            lost-column: 4/12 3;
+        }
+
+        &__title {
+            font-weight: $type-weight-bold;
+        }
+
+        &__description {
+            
+        }
+    }
+}

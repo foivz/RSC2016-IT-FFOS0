@@ -1,0 +1,59 @@
+/*------------------------------------*\
+    # components.message
+\*------------------------------------*/
+
+.message {
+    margin-bottom: calc($unit * 4);
+
+    &__sender {
+        color: color($color-text a(0.7));
+        @mixin type-scale $type-small, 0.75;
+    }
+
+    &__player {
+        color: $color-primary;
+    }
+
+    &__team {
+        color: $color-secondary;
+    }
+
+    &__body {
+        margin-top: calc($unit * 1);
+        margin-bottom: calc($unit * 1);
+
+        &__content {
+            padding: calc($unit * 1) calc($unit * 5);
+            background: $color-primary;
+            color: white;
+            display: inline-block;
+            clear: both;
+            border-radius: $global-rounded;
+        }
+    }   
+
+    &--moderator {
+
+    }
+
+    &--system {
+        text-align: center;
+    }
+
+    &--player {
+        lost-utility: clearfix;
+
+        .message__body {
+            float: right;
+
+            &__content {
+                background: $color-secondary;
+            }
+        }
+
+        .message__sender {
+            text-align: right;
+            padding-right: calc($unit * 3);
+        }
+    }
+}

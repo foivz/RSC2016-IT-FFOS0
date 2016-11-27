@@ -1,0 +1,37 @@
+/*------------------------------------*\
+    # components.splash
+\*------------------------------------*/
+
+.splash {
+    position: relative;
+    background: white;
+    background: url('../images/background.jpg');
+    lost-utility: clearfix;
+    text-align: center;
+
+    @media (--screen-from-med) {
+        text-align: left;
+    }
+
+    &__title {
+        padding: calc($unit * 30) 0;
+
+        @media (--screen-from-med) {
+            float: left;
+            text-align: left;
+        }
+    }
+
+    &__phone {
+        width: 400px;
+
+        @media (--screen-from-med) {
+            float: right;   
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

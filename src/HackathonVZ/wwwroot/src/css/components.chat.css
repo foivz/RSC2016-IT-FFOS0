@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    # components.chat
+\*------------------------------------*/
+
+.chat {
+    position: absolute;
+    top: 72px;
+    bottom: 0;
+    overflow: auto;
+    width: 100%;
+    max-width: 600px;
+    background: white;  
+    padding-top: calc($unit * 4);
+
+    &__title {
+        padding: calc($unit * 4);
+    }
+
+    &__messages {
+        padding: 0 calc($unit * 4);
+        margin-bottom: calc($unit * 20);
+        padding-bottom: calc($unit * 46);
+    }
+}

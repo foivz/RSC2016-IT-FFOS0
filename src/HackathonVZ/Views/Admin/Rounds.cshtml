@@ -1,0 +1,48 @@
+﻿@model RoundsViewModel
+@{ 
+    ViewData["title"] = "Quiz Setup";
+}
+
+<div class="rounds">
+    <div class="wrapper wrapper--narrow wrapper--padding">
+        <h1 class="rounds__title u-type--gamma">Add rounds to the quiz</h1>
+
+        <h3 class="field__lbl rounds__lbl">
+            Select round type
+        </h3>
+        @Html.DropDownList("TypeId", new SelectList(Model.QuestionTypes, "Id", "Name", Model.QuestionTypes.FirstOrDefault()),
+        new { @class = "js-typeIdOnCreate input input--lrg input--text rounds__select" })
+
+        <h3 class="field__lbl rounds__lbl">
+            Select category for this round
+        </h3>
+        @Html.HiddenFor(m=>m.Quiz.Id, new { @class="js-quizId"})
+        @Html.DropDownList("CategoryId", new SelectList(Model.Categories, "Id", "Name", Model.Categories.FirstOrDefault()),
+        new { @class = "js-categoryIdOnCreate input input--lrg input--text rounds__select" })
+
+        <h3 class="field__lbl rounds__lbl">
+            Enter number of questions
+        </h3>
+
+        <input class="input input--text input--lrg rounds__select js-numberOfQuestions" type="number" min="1" value="5"/>
+        
+        <h3 class="field__lbl rounds__lbl">
+            Turbo round?
+        </h3>
+        <input class="" type="checkbox" id="turbo" class="js-turboModifier" />
+        
+        <button class="js-addRound btn btn--primary btn--lrg rounds__button">Add Round</button>
+
+        <h3 class="rounds__title u-type--gamma">
+            Added rounds
+        </h3>
+        <div class="js-roundsPartial">
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+    <script src="~/dist/js/js-AdminRound.js"></script>
+}
+

@@ -1,0 +1,67 @@
+/*------------------------------------*\
+    # components.rounds
+\*------------------------------------*/
+
+.rounds {
+    &__title {
+        border-bottom: 1px solid color($color-primary a(0.3));
+        text-align: center;
+        margin-top: calc($unit * 10);
+        margin-bottom: calc($unit * 6);
+        padding-bottom: calc($unit * 4);
+    }
+
+    &__round {
+        margin-top: calc($unit * 10);
+        margin-bottom: calc($unit * 6);
+        text-align: center;
+    }
+
+    &__lbl {
+        padding-bottom: calc($unit * 2);
+        margin-left: calc($unit * 2);
+        @mixin type-scale $type-medium, 1.25;
+    }
+
+    &__select {
+        margin-bottom: calc($unit * 8);
+        border-radius: $global-rounded; 
+        @mixin type-scale $type-base, 1;
+    }
+
+    &__added {
+        padding-bottom: calc($unit * 20);
+
+        .rounds__select {
+            margin-bottom: calc($unit * 4);
+        }
+    }
+
+    &__button {
+        width: 100%;
+    }
+
+    &__question {
+        position: relative;
+        background: white;
+        padding: calc($unit * 4);
+        margin-bottom: calc($unit * 4);
+        border-radius: $global-radial;
+
+        &__title {
+            margin-bottom: calc($unit * 2);
+        }
+
+        .rounds__button {
+            margin-bottom: calc($unit * 3);
+        }
+    }
+
+    &__modifier {
+        padding: calc($unit * 5);
+        position: absolute;
+        top: 0; 
+        right: 0;
+    }
+
+}

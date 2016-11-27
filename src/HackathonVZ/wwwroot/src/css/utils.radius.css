@@ -1,0 +1,13 @@
+/*------------------------------------*\
+    # utils.radius
+\*------------------------------------*/
+
+.u {
+    &-radial {
+        border-radius: $global-radial;
+    }
+
+    &-rounded {
+        border-radius: $global-rounded;
+    }
+}

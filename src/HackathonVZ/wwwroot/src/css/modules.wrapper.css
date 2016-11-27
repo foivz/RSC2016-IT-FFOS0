@@ -1,0 +1,36 @@
+/*------------------------------------*\
+    # modules.wrapper
+\*------------------------------------*/
+
+.wrapper {
+    lost-utility: clearfix;
+    max-width: 1050px;
+    padding-left: calc($unit * 4);
+    padding-right: calc($unit * 4);
+    margin: 0 auto;
+
+    @media (--screen-from-med) {
+        padding-left: calc($unit * 8);
+        padding-right: calc($unit * 8);
+    }
+
+    &--fullWidth {
+        max-width: 100%;
+        padding: 0;
+    }   
+
+    &--narrow {
+        max-width: 600px;
+        padding: 0;
+    }
+
+    &--padding {
+        padding-left: calc($unit * 4);
+        padding-right: calc($unit * 4);
+
+        @media (--screen-from-med) {
+            padding-left: calc($unit * 8);
+            padding-right: calc($unit * 8);
+        }
+    }
+}

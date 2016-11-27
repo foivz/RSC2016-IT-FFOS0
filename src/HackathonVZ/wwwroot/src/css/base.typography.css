@@ -1,0 +1,116 @@
+/*------------------------------------*\
+    # base.typography
+\*------------------------------------*/
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+h1 {
+    @mixin type-scale $type-xxlarge, 2.25;
+}
+h2 {
+    @mixin type-scale $type-xlarge, 1.75;
+}
+h3 {
+    @mixin type-scale $type-medium, 1.25;
+}
+h4 {    
+    @mixin type-scale $type-base, 1;
+}
+h5, h6 {
+    @mixin type-scale $type-small, 0.75;   
+}
+
+@media (--screen-from-med) {
+    h1 {
+        @mixin type-scale $type-xxxlarge, 3;
+    }
+    h2 {
+        @mixin type-scale $type-xxlarge, 2.25;
+    }
+    h3 {
+        @mixin type-scale $type-xlarge, 1.75;
+    }
+    h4 {
+        @mixin type-scale $type-medium, 1.25;
+    }
+    h5, h6 {
+        @mixin type-scale $type-base, 1;   
+    }
+}
+
+/**
+ * Paragraphs
+ */
+p {
+    @mixin type-scale $type-small, 0.75;
+    margin: 0;
+
+    @media (--screen-from-med) {
+        @mixin type-scale $type-base, 1;
+    }
+}
+
+/**
+ * Lists (ol, ul, dd)
+ */
+ol, ul, dl {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ol {}
+ol li {}
+ul {}
+ul li {}
+dd {}
+dl dt {}
+dl dd {}
+
+/**
+ * Anchors
+ */
+a {
+    text-decoration: none;
+    color: $color-secondary-accent;
+    
+    &:link {}
+    &:hover,
+    &:focus {
+        color: color($color-secondary-accent blackness(+25%));
+    }
+    &:visited {}
+}
+
+/**
+ * Typographic details
+ */
+hr {
+    border: 0;
+    border-bottom: 1px solid color(white blackness(+15%));
+}
+em {}
+b, strong {
+    font-weight: $type-weight-bold;
+}
+address {}
+small {
+    @mixin type-scale $type-small, 0.75;
+}
+pre {}
+code {}
+sub {}
+sup {}
+strike {}
+
+/**
+ * Tables
+ */
+table {
+    th {
+        text-align: left;
+    }
+}

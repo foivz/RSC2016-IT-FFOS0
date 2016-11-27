@@ -1,0 +1,10 @@
+/*------------------------------------*\
+    # components.showoff
+\*------------------------------------*/
+
+.showoff {
+    margin: 0 auto;
+    text-align: center;
+    background: color($color-primary a(0.2));
+    padding: calc($unit * 50) 0;
+}

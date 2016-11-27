@@ -1,0 +1,39 @@
+/*------------------------------------*\
+    # components.nav
+\*------------------------------------*/
+
+.nav {  
+    float: right;
+    lost-utility: clearfix;
+    margin-top: calc($unit * 2);
+
+    &__item {
+        float: left;
+        padding-left: calc($unit * 4);
+    }
+
+    &__link {
+        display: inline-block;
+
+        a {
+            color: $color-primary;
+        }
+    }
+
+    &__user {
+        text-align: center;
+        padding: calc($unit * 3) 0;
+
+        @media (--screen-from-med) {
+            float: left;
+        }
+    }
+
+    &__logoff {
+        padding: calc($unit * 3) 0;
+
+        @media (--screen-from-med) {
+            float: right;
+        }
+    }
+}

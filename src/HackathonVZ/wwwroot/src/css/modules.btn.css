@@ -1,0 +1,158 @@
+/*------------------------------------*\
+# modules.btn
+\*------------------------------------*/
+
+.btn {
+
+    /**
+    * Button base
+    */
+    display: inline-block;
+    vertical-align: middle;
+
+    touch-action: manipulation;
+    user-select: none;
+
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    border: 0;
+    background: transparent;
+
+    transition: all .15s ease-in-out;
+
+    &:focus {
+        outline: 0;
+    }
+
+    /**
+    * Button base project styling
+    */
+    font-family: $ff-sans;
+    font-weight: $type-weight-regular;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+
+    /**
+    * Button styles
+    */
+    &--primary {
+        background-color: $color-primary;
+        border-radius: $global-rounded;
+        transition: all 0.2s ease-in-out; 
+        color: white;
+
+        &:hover,
+        &:focus {
+            color: white;
+            background-color: color($color-primary lightness(+5%));
+        }
+    }
+
+    &--secondary {
+        background-color: $color-secondary-accent;
+        border-radius: $global-rounded;
+        transition: all 0.2s ease-in-out; 
+        color: white;
+
+        &:hover,
+        &:focus {
+            color: white;
+            background-color: color($color-secondary-accent lightness(+5%));
+        }
+    }
+
+    &--bordered {
+        border: 1px solid $color-secondary;
+        color: $color-secondary;
+        background: transparent;
+        border-radius: $global-rounded;
+        transition: all 0.2s ease-in-out; 
+
+        &:hover,
+        &:focus {
+            color: white;
+            background: $color-secondary;
+            border: 1px solid color($color-secondary lightness(+5%));
+        }
+    }
+
+    &--bordered--alt {
+        border: 1px solid $color-primary;
+        color: $color-primary;
+        background: transparent;
+        border-radius: $global-rounded;
+        transition: all 0.2s ease-in-out; 
+
+        &:hover,
+        &:focus {
+            color: white;
+            background: $color-primary;
+            border: 1px solid color($color-primary lightness(+5%));
+        }
+    }
+
+    &--special {
+        border-top-right-radius: $global-rounded;
+        border-bottom-right-radius: $global-rounded;
+        transition: all 0.2s ease-in-out;
+        color: $color-primary; 
+
+        &:hover,
+        &:focus {
+            color: $color-primary-accent; 
+        }
+    }
+
+    /**
+    * Disabled
+    */
+
+    &.is-disabled,
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+        filter: grayscale(100%);
+    }
+
+    &.is-disabled {
+        pointer-events: none;
+    }
+
+    /**
+    * Button sizes
+    */
+    &--sml {
+        @mixin type-scale $type-tiny, 1;
+        height: calc($unit * 6);
+        line-height: calc($unit * 6);
+        padding: 0 calc($unit * 4);
+    }
+
+    &--med {
+        @mixin type-scale $type-small, 1;
+        height: calc($unit * 8);
+        line-height: calc($unit * 8);
+        padding: 0 calc($unit * 4);
+    }
+
+    &--lrg {
+        height: calc($unit * 10);
+        line-height: calc($unit * 10);
+        padding: 0 calc($unit * 6);
+    }
+
+    /**
+    * Spacer - a placeholder for text between
+    * two or more buttons
+    */
+    &-spacer {
+        padding: 0 calc($unit);
+        @mixin type-scale $type-tiny, 0.75;
+        text-transform: uppercase;
+        letter-spacing: .15em;
+        color: color(white blackness(+50%));
+    }
+
+    /* Special cases */
+}
